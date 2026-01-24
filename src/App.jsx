@@ -1,16 +1,16 @@
-import { useState } from "react";
-import "./App.css";
-import Scram from "./Scram.jsx";
-import ProfileCard from "./ProfileCard.jsx";
-import PixelCard from "./components/PixelCard.jsx";
-import image from "./image.jpg";
-import PillNav from "./PillNav";
-import logo from "./image.jpg";
-import DotGrid from "./components/DotGrid.jsx";
+import DotGrid from "./components/DotGrid/DotGrid.jsx";
+import PillNav from "./components/PillNav/PillNav.jsx";
+import PixelCard from "./components/PixelCard/PixelCard.jsx";
+import Shuffle from "./components/Shuffle/Shuffle.jsx";
+import logo from "./logo.svg";
+import TextType from "./components/TextType/TextType.jsx";
+import Button from "./components/Button/Button.jsx";
+import  Links from "./components/Links/Links.jsx";
+
 function App() {
 	return (
 		<>
-			<div style={{ width: "100%", height: "100vh", position: "fixed" }}>
+			<div style={{ width: "100%", height: "100%", position: "fixed" }}>
 				<DotGrid
 					dotSize={5}
 					gap={15}
@@ -26,12 +26,12 @@ function App() {
 			<div className="flex justify-center h-25">
 				<PillNav
 					logo={logo}
-					logoAlt="Company Logo"
+					logoAlt="Event Logo"
 					items={[
 						{ label: "Home", href: "/" },
-						{ label: "About", href: "/about" },
-						{ label: "Services", href: "/services" },
-						{ label: "Contact", href: "/contact" },
+						{ label: "Events", href: "/about" },
+						{ label: "About", href: "/services" },
+						{ label: "Contacts", href: "/contact" },
 					]}
 					activeHref="/"
 					className="custom-nav"
@@ -44,6 +44,45 @@ function App() {
 					initialLoadAnimation={false}
 				/>
 			</div>
+        <Links url="https://maps.app.goo.gl/TSgtXmcomGa4yaXz8"/>
+			<div className="text-center m-4">
+				<Shuffle
+					text="KEC Lite 2082"
+					shuffleDirection="right"
+					duration={0.35}
+					animationMode="evenodd"
+					shuffleTimes={1}
+					ease="power3.out"
+					stagger={0.03}
+					threshold={0.1}
+					triggerOnce={true}
+					triggerOnHover
+					respectReducedMotion={true}
+					loop={false}
+					loopDelay={0}
+				/>
+			</div>
+			<div>
+        </div>
+			<div className="text-5xl text-center p-6 relative">
+				<TextType
+					text={["We've go events for:", "Electronics", "Computer", "Civil"]}
+					typingSpeed={75}
+					pauseDuration={1500}
+					showCursor
+					cursorCharacter="_"
+					texts={[
+						"Welcome to React Bits! Good to see you!",
+						"Build some amazing experiences!",
+					]}
+					deletingSpeed={50}
+					variableSpeedEnabled={false}
+					variableSpeedMin={60}
+					variableSpeedMax={120}
+					cursorBlinkDuration={0.5}
+				/>
+			</div>
+
 			<div className="flex justify-center">
 				<PixelCard variant="pink">
 					<div className="absolute text-center text-white">

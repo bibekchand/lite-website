@@ -1,6 +1,8 @@
 @import "tailwindcss";
+*{
+    font-family: "Silkscreen", sans-serif;
+}
 #root{
     background-color:black;
-    height:200vh;
-
+    color:white;
 }
