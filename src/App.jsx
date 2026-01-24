@@ -44,8 +44,7 @@ function App() {
 					initialLoadAnimation={false}
 				/>
 			</div>
-        <Links url="https://maps.app.goo.gl/TSgtXmcomGa4yaXz8"/>
-			<div className="text-center m-4">
+			<div className="text-center p-4">
 				<Shuffle
 					text="KEC Lite 2082"
 					shuffleDirection="right"
@@ -64,6 +63,7 @@ function App() {
 			</div>
 			<div>
         </div>
+        <Links url="https://maps.app.goo.gl/TSgtXmcomGa4yaXz8"/>
 			<div className="text-5xl text-center p-6 relative">
 				<TextType
 					text={["We've go events for:", "Electronics", "Computer", "Civil"]}
@@ -85,7 +85,7 @@ function App() {
 
 			<div className="flex justify-center">
 				<PixelCard variant="pink">
-					<div className="absolute text-center text-white">
+					<div className="absolute text-center ">
 						<div>Our Event</div>
 						<div>Our Event</div>
 					</div>
