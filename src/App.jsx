@@ -1,14 +1,16 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import DotGrid from "./components/DotGrid/DotGrid.jsx";
 import PillNav from "./components/PillNav/PillNav.jsx";
 import logo from "./logo.svg";
 import About from "./pages/About/About.jsx";
 import Home from "./pages/Home/Home.jsx";
+import cursor from "./cursor.png";
 
 function App() {
+    const location = useLocation()
 	return (
 		<>
-			<div style={{ width: "100%", height: "100%", position: "fixed" }}>
+			<div style={{ width: "100%", height: "100%", position: "fixed"}}>
 				<DotGrid
 					dotSize={5}
 					gap={15}
@@ -21,20 +23,20 @@ function App() {
 					returnDuration={1.5}
 				/>
 			</div>
-			<div className="flex justify-center h-25">
+			<div className="flex justify-center h-25" >
 				<PillNav
 					logo={logo}
 					logoAlt="Event Logo"
 					items={[
 						{ label: "Home", href: "/" },
-						{ label: "Events", href: "/about" },
-						{ label: "About", href: "/services" },
+						{ label: "Events", href: "/events" },
+						{ label: "About", href: "/about" },
 						{ label: "Contacts", href: "/contact" },
 					]}
-					activeHref="/"
+					activeHref= {location.pathname}
 					className="custom-nav"
 					ease="power2.easeOut"
-					baseColor="#000000"
+					baseColor="#002d71"
 					pillColor="#ffffff"
 					hoveredPillTextColor="#ffffff"
 					pillTextColor="#000000"

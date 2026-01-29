@@ -5,4 +5,5 @@
 #root{
     background-color:black;
     color:white;
+    cursor: url('./cursor.png');
 }
