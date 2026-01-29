@@ -2,7 +2,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline
 
 function Contact() {
   return (
-    <div className="px-6 py-20 text-white max-w-3xl mx-auto">
+    <div className="px-6 py-20 text-white max-w-3xl mx-auto relative">
       <h1 className="text-4xl font-bold mb-12 text-center">Contact Us</h1>
       <div className="flex flex-col gap-6">
         <div className="flex items-center gap-4">
